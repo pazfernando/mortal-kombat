@@ -7,7 +7,6 @@ Then(/^debo ver el mensaje "(.*?)"$/) do |mensaje|
 end
 
 Given(/^que un jugador tiene cero de vida$/) do
-
   click_button("PA")
   click_button("PA")
   click_button("PA")
@@ -38,4 +37,15 @@ end
 When(/^presione "(.*?)"$/) do |comando|
   click_button(comando)
 
+end
+
+
+Given(/^la pelea termino$/) do
+  visit '/finish'
+end
+
+Given(/^se realizo la combinacion de golpes para fatality$/) do
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
 end
