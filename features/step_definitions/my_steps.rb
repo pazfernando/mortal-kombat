@@ -60,3 +60,7 @@ end
 Then(/^puedo seleccionar "(.*?)"$/) do |character|
   select "Sub Zero", :from => "characters"
 end
+
+Given(/^que inicie una partida como jugador (\d+)$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
