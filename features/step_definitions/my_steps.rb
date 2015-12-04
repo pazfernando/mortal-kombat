@@ -58,7 +58,7 @@ Then(/^veo una lista con los personajes a seleccionar$/) do
 end
 
 Then(/^puedo seleccionar "(.*?)"$/) do |character|
-  select "Sub Zero", :Winsfrom => "characters"
+  select /#{character}/m, :Winsfrom => "characters1"
 end
 
 Given(/^que inicie una partida como jugador (\d+)$/) do |arg1|
@@ -87,4 +87,8 @@ Given(/^que el jugador uno tiene cero de vida$/) do
   click_button("PA2")
   click_button("PA2")
   click_button("PA2")
+end
+
+Then(/^dirigirme a la página de iniciar el juego$/) do
+  click_button("Fight")
 end

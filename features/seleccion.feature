@@ -5,5 +5,5 @@ Feature:
 
 Scenario:
    Given que debo seleccionar el personaje
-   #And veo una lista con los personajes a seleccionar
    Then puedo seleccionar "Sub Zero"
+   And dirigirme a la página de iniciar el juego
