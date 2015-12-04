@@ -6,7 +6,7 @@ Then(/^debo ver el mensaje "(.*?)"$/) do |mensaje|
   last_response.body.should =~ /#{mensaje}/m
 end
 
-Given(/^que un jugador tiene cero de vida$/) do
+Given(/^que el dummy tiene cero de vida$/) do
   click_button("PA")
   click_button("PA")
   click_button("PA")
@@ -63,4 +63,28 @@ end
 
 Given(/^que inicie una partida como jugador (\d+)$/) do |arg1|
   pending # express the regexp above with the code you wish you had
+end
+
+
+Given(/^que el jugador uno tiene cero de vida$/) do
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
+  click_button("PA2")
 end

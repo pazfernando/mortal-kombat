@@ -2,6 +2,7 @@ require 'sinatra'
 require './lib/player'
 
 @@golpes_fatality=-1
+@@ganador = ""
 
 get '/' do
 
@@ -23,8 +24,28 @@ post '/hit' do
   end
 end
 
+post '/hit2' do
+  @@player1.hit 5
+
+  if @@player1.life > 0
+    erb :game
+  else
+    erb :finish
+  end
+end
+
+get '/select' do
+  erb :select
+end
+
 # Pantalla de finish
 get '/finish' do
+  if @@player2.life==0
+    @@ganador = "Me"
+  else
+    @@ganador = "Player 2"
+  end
+
   @@golpes_fatality+=1
    if @@golpes_fatality == 3
      @@golpes_fatality=-1
@@ -38,8 +59,4 @@ end
 get '/fatality' do
   erb :fatality
 
-end
-
-get '/select' do
-  erb :select
 end
