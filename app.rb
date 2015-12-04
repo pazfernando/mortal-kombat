@@ -1,6 +1,7 @@
 require 'sinatra'
 require './lib/player'
 
+@@golpes_fatality=-1
 
 get '/' do
 
@@ -24,7 +25,13 @@ end
 
 # Pantalla de finish
 get '/finish' do
-   erb :finish
+   @@golpes_fatality+=1
+   if @@golpes_fatality == 3
+     @@golpes_fatality=0
+     erb :fatality
+  else
+    erb :finish
+  end
 end
 
 get '/fatality' do

@@ -43,6 +43,8 @@ Given(/^la pelea termino$/) do
   visit '/finish'
 end
 
-Given(/^se realizo la combinacion de golpes para fatality$/) do
-  click_button("PA")
+When(/^se realizo la combinacion de golpes para fatality$/) do
+  click_button("PAF")
+  click_button("PAF")
+  click_button("PAF")
 end

@@ -6,5 +6,5 @@ Feature:
 Scenario:
 
   Given la pelea termino
-  And se realizo la combinacion de golpes para fatality
+  When se realizo la combinacion de golpes para fatality
   Then debo ver el mensaje "FATALITY"
