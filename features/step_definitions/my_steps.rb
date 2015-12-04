@@ -13,3 +13,8 @@ end
 Then(/^el juego termino "(.*?)"$/) do |arg1|
   last_response.body.should =~ /#{arg1}/m
 end
+
+When(/^presione "(.*?)"$/) do |comando|
+  click_button(comando)
+
+end
