@@ -12,7 +12,6 @@ class Player
      if (@life < percentage)
        percentage = @life
      end
-
      @life -= percentage
    end
 
