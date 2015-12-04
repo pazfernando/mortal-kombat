@@ -7,7 +7,4 @@ Scenario:
   Given que inicie una partida
   And que un jugador tiene cero de vida
   Then el juego termino "FINISH HIM!"
-
-#Scenerio:
- #Given que un jugador tiene 0 de vida
- #Then
+  And debo ver el mensaje "Me Wins!"
