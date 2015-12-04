@@ -22,6 +22,7 @@ get '/hit' do
   end
 end
 
+# Pantalla de finish
 get '/finish' do
    erb :finish
 end
