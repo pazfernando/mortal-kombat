@@ -26,3 +26,8 @@ end
 get '/finish' do
    erb :finish
 end
+
+get '/fatality' do
+  erb :fatality
+
+end

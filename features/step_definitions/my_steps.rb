@@ -45,6 +45,4 @@ end
 
 Given(/^se realizo la combinacion de golpes para fatality$/) do
   click_button("PA")
-  click_button("PA")
-  click_button("PA")
 end
