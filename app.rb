@@ -13,7 +13,7 @@ get '/game' do
   erb :game
 end
 
-get '/hit' do
+post '/hit' do
   @@player2.hit 5
 
   if @@player2.life > 0
@@ -25,11 +25,12 @@ end
 
 # Pantalla de finish
 get '/finish' do
-   @@golpes_fatality+=1
+  @@golpes_fatality+=1
    if @@golpes_fatality == 3
-     @@golpes_fatality=0
+     @@golpes_fatality=-1
      erb :fatality
   else
+
     erb :finish
   end
 end

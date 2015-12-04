@@ -48,3 +48,7 @@ When(/^se realizo la combinacion de golpes para fatality$/) do
   click_button("PAF")
   click_button("PAF")
 end
+
+Given(/^que inicie una partida como jugador (\d+)$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
