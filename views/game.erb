@@ -2,10 +2,13 @@
   <head>
   </head>
   <body>
-    <h1>Dummy 100%</h1>
-    <form method="get" action="/game">
+
+    <div style="width:100%;height:50px">
+    <div style="width:50%;float:left" >Me <%= @@player1.life %>%</div>
+    <div style="width:50%;float:right">Dummy <%= @@player2.life %>%</div>
+  </div>
+    <form method="get" action="/hit">
       <input type="submit" id="PA" value="PA"/>
-      <h1>Dummy 95%</h1>
     </form>
     <h1>Dummy 0%</h1>
     <h1>Finish</h1>

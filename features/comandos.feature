@@ -7,3 +7,4 @@ Scenario:
   Given que inicie una partida
   When presione "PA"
   Then debo ver el mensaje "95%"
+  

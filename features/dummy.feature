@@ -5,5 +5,5 @@ Feature:
 
 Scenario:
   Given que inicie una partida
-  Then debo ver el mensaje "Dummy"
-  And debo ver el mensaje "100%"
+  Then debo ver el mensaje "Dummy 100%"
+  And debo ver el mensaje "Me 100%"
