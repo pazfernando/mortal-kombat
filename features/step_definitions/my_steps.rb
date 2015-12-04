@@ -7,6 +7,27 @@ Then(/^debo ver el mensaje "(.*?)"$/) do |mensaje|
 end
 
 Given(/^que un jugador tiene cero de vida$/) do
+
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
+  click_button("PA")
   last_response.body.should =~ /Dummy 0%/m
 end
 
