@@ -30,7 +30,7 @@ Given(/^que el dummy tiene cero de vida$/) do
   end
 
 Then(/^el juego termino "(.*?)"$/) do |arg1|
-  visit '/finish'
+  #visit '/finish'
   last_response.body.should =~ /#{arg1}/m
 end
 
@@ -58,7 +58,7 @@ Then(/^veo una lista con los personajes a seleccionar$/) do
 end
 
 Then(/^puedo seleccionar "(.*?)"$/) do |character|
-  select "Sub Zero", :from => "characters"
+  select "Sub Zero", :Winsfrom => "characters"
 end
 
 Given(/^que inicie una partida como jugador (\d+)$/) do |arg1|

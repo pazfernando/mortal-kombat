@@ -9,7 +9,7 @@ Scenario:
   Then el juego termino "FINISH HIM!"
   And debo ver el mensaje "Me Wins!"
 
-  Scenario:
+Scenario:
     Given que inicie una partida
     And que el jugador uno tiene cero de vida
     Then el juego termino "FINISH HIM!"

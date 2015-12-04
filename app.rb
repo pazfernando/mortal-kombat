@@ -20,6 +20,7 @@ post '/hit' do
   if @@player2.life > 0
     erb :game
   else
+    @@ganador = "Me"
     erb :finish
   end
 end
@@ -30,6 +31,7 @@ post '/hit2' do
   if @@player1.life > 0
     erb :game
   else
+    @@ganador = "Dummy"
     erb :finish
   end
 end
@@ -40,20 +42,14 @@ end
 
 # Pantalla de finish
 get '/finish' do
-  if @@player2.life==0
-    @@ganador = "Me"
-  else
-    @@ganador = "Player 2"
-  end
-
   @@golpes_fatality+=1
-   if @@golpes_fatality == 3
+  if @@golpes_fatality == 3
      @@golpes_fatality=-1
      erb :fatality
   else
-
     erb :finish
   end
+
 end
 
 get '/fatality' do
