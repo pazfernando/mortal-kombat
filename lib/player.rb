@@ -9,6 +9,10 @@ class Player
    end
 
    def hit percentage
+     if (@life < percentage)
+       percentage = @life
+     end
+
      @life -= percentage
    end
 

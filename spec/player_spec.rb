@@ -13,4 +13,13 @@ describe Player do
     dummy.life.should == 95
   end
 
+  it "si jugador recibe patada alta y vida es menor que cinco y mayor que cero
+  la vida resultante debe ser cero" do
+    dummy = Player.new
+    dummy.life = 4
+    dummy.hit 5
+    dummy.life.should == 0
+  end
+
+
 end
