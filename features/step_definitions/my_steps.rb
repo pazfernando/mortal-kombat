@@ -7,7 +7,6 @@ Then(/^debo ver el mensaje "(.*?)"$/) do |mensaje|
 end
 
 Given(/^que un jugador tiene cero de vida$/) do
-
   click_button("PA")
   click_button("PA")
   click_button("PA")
@@ -28,14 +27,13 @@ Given(/^que un jugador tiene cero de vida$/) do
   click_button("PA")
   click_button("PA")
   click_button("PA")
-  last_response.body.should =~ /Dummy 0%/m
-end
+  end
 
 Then(/^el juego termino "(.*?)"$/) do |arg1|
+  visit '/finish'
   last_response.body.should =~ /#{arg1}/m
 end
 
 When(/^presione "(.*?)"$/) do |comando|
   click_button(comando)
-
 end

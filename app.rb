@@ -14,5 +14,14 @@ end
 
 get '/hit' do
   @@player2.hit 5
-  erb :game
+
+  if @@player2.life > 0
+    erb :game
+  else
+    erb :finish
+  end
+end
+
+get '/finish' do
+   erb :finish
 end
