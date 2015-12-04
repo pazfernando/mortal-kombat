@@ -38,3 +38,7 @@ get '/fatality' do
   erb :fatality
 
 end
+
+get '/select' do
+  erb :select
+end

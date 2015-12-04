@@ -48,3 +48,15 @@ When(/^se realizo la combinacion de golpes para fatality$/) do
   click_button("PAF")
   click_button("PAF")
 end
+
+Given(/^que debo seleccionar el personaje$/) do
+  visit '/select'
+end
+
+Then(/^veo una lista con los personajes a seleccionar$/) do
+
+end
+
+Then(/^puedo seleccionar "(.*?)"$/) do |character|
+  select "Sub Zero", :from => "characters"
+end
