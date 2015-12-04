@@ -1,5 +1,7 @@
 class Player
 
+   attr_accessor :life
+
    @life
 
    def initialize
